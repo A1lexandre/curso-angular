@@ -1,3 +1,5 @@
+Curso de Angular oferecido pela Digital Innovation One aplicado por Renan Rafael Bertoldo.
+
 ## Instalação
 
 1. clone o repositório `git clone https://github.com/A1lexandre/Curso-de-Angular.git
