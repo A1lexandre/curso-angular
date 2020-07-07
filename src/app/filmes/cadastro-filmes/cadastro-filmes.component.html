@@ -1,0 +1,52 @@
+<mat-toolbar class="app-title">Cadastrar Filme</mat-toolbar>
+<div class="main-div">
+  <mat-card class="center width50" >
+    <form [formGroup]="cadastro" (ngSubmit)="salvar()">
+      <mat-card-content>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Título *" formControlName="titulo">
+            <mat-error *ngIf="validacao.validarErros(f.titulo, 'required')">O nome do filme é obrigatório</mat-error>
+            <mat-error *ngIf="validacao.validarErros(f.titulo, 'minlength')">Esse campo deve ter no mínimo 2 caracteres</mat-error>
+            <mat-error *ngIf="validacao.validarErros(f.titulo, 'maxlength')">Esse campo deve ter no máximo 256 caracteres</mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Link Foto" formControlName="imagemUrl">
+            <mat-error *ngIf="validacao.validarErros(f.imagemUrl, 'minlength')">O link da imagem deve ter no mínimo 10 caracteres</mat-error>
+          </mat-form-field>
+          <mat-form-field (click)="picker.open()" class="full-width">
+              <input matInput readonly [matDatepicker]="picker" placeholder="Data de Lançamento *" formControlName="dtLancamento">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="validacao.validarErros(f.dtLancamento, 'required')">A data de lançamento é obrigatória</mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Descrição" formControlName="descricao"></textarea>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input type="number" min="0" max="10" step="0.1" matInput placeholder="Nota IMDb *" formControlName="notaIMDb">
+            <mat-error *ngIf="validacao.validarErros(f.notaIMDb, 'required')">A nota do filme é obrigatória</mat-error>
+            <mat-error *ngIf="validacao.validarErros(f.notaIMDb, 'min') || validacao.validarErros(f.notaIMDb, 'max')">A nota do filme deve ser entre 0 e 10</mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Link IMDb" formControlName="iMDbUrl">
+            <mat-error *ngIf="validacao.validarErros(f.iMDbUrl, 'minlength')">O link do IMDb para o filme deve ter no mínimo 10 caracteres</mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Gênero *" formControlName="genero">
+              <mat-option value="Ação">Açao</mat-option>
+              <mat-option value="Aventura">Aventura</mat-option>
+              <mat-option value=">Ficção Científica">Ficção Científica</mat-option>
+              <mat-option value="Romance">Romance</mat-option>
+              <mat-option value="Terror">Terror</mat-option>
+            </mat-select>
+            <mat-error *ngIf="validacao.validarErros(f.genero, 'required')">O gênero do filme é onrigatório</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+    
+        <mat-card-actions>
+          <button type="submit" color="accent" mat-raised-button>Salvar</button>
+          <button type="reset" color="warn" mat-raised-button>Cancelar</button>
+        </mat-card-actions>
+    </form>    
+  </mat-card>
+</div>
