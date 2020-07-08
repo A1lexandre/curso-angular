@@ -31,8 +31,6 @@ export class CadastroFilmesComponent implements OnInit {
       'genero': ['', Validators.required]
     });
 
-    console.log(this.cadastro);
-
   }
 
   salvar(): void {
