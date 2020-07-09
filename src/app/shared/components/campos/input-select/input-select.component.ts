@@ -13,6 +13,7 @@ export class InputSelectComponent implements OnInit {
   @Input() titulo: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
+  @Input() opcoes: Array<string>;
 
   constructor(public validacao: ValidarCamposService) { }
 
@@ -24,4 +25,3 @@ export class InputSelectComponent implements OnInit {
   }
 
 }
- 
