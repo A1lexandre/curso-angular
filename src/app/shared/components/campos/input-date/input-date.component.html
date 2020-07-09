@@ -1,1 +1,8 @@
-<p>input-date works!</p>
+<div [formGroup]="formGroup">
+<mat-form-field (click)="picker.open()" class="full-width">
+    <input matInput readonly [matDatepicker]="picker" [placeholder]="titulo" [formControlName]="controlName">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="validacao.validarErros(formControl, 'required')">A data de lançamento é obrigatória</mat-error>
+</mat-form-field>
+</div>

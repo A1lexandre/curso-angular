@@ -1,1 +1,7 @@
-<p>input-number works!</p>
+<div [formGroup]="formGroup">
+<mat-form-field class="full-width">
+    <input matInput type="number" [min]="minimo" [max]="maximo" [step]="step" [placeholder]="titulo" [formControlName]="controlName">
+    <mat-error *ngIf="validacao.validarErros(formControl, 'required')">A nota do filme é obrigatória</mat-error>
+    <mat-error *ngIf="validacao.validarErros(formControl, 'min') || validacao.validarErros(formControl, 'max')">A nota do filme deve ser entre 0 e 10</mat-error>
+</mat-form-field>
+</div>
