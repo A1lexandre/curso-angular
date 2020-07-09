@@ -2,6 +2,7 @@
 <mat-form-field class="full-width">
     <input matInput type="number" [min]="minimo" [max]="maximo" [step]="step" [placeholder]="titulo" [formControlName]="controlName">
     <mat-error *ngIf="validacao.validarErros(formControl, 'required')">A nota do filme é obrigatória</mat-error>
-    <mat-error *ngIf="validacao.validarErros(formControl, 'min') || validacao.validarErros(formControl, 'max')">A nota do filme deve ser entre 0 e 10</mat-error>
+<mat-error *ngIf="validacao.validarErros(formControl, 'max')">O valor desse campo deve ser no máximo {{ validacao.validarLength(formControl, 'max') }}.</mat-error>
+<mat-error *ngIf="validacao.validarErros(formControl, 'min')">O valor desse campo deve ser no mínimo {{ validacao.validarLength(formControl, 'min') }}.</mat-error>
 </mat-form-field>
 </div>

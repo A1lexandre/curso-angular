@@ -18,4 +18,10 @@ export class ValidarCamposService {
   private hasError(control: AbstractControl, errorName: string): boolean {
     return control.hasError(errorName);
   }
+
+  public validarLength(control: AbstractControl, errorName: string) {
+    const error = control.errors[errorName];
+    return error.requiredLength || error.min || error.max || 0;
+  }
+
 }
