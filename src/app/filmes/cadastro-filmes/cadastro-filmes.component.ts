@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 import { ValidarCamposService } from './../../shared/components/campos/validar-campos.service';
+import { FilmeService } from './../../core/filme.service';
+import { Filme } from 'src/app/shared/models/filme';
 
 
 @Component({
@@ -18,6 +20,7 @@ export class CadastroFilmesComponent implements OnInit {
  // sendo declarada como atributo da classe e sendo
  // instanciada
   constructor(private fb: FormBuilder,
+              private filmeService: FilmeService,
               public validacao: ValidarCamposService) { }
 
   ngOnInit(): void {
@@ -36,17 +39,20 @@ export class CadastroFilmesComponent implements OnInit {
 
   }
 
-  salvar(): void {
-    console.log(this.cadastro);
+  submit(): void {
     if (this.cadastro.invalid) {
       return;
     }
-
-  console.log(this.cadastro.value);
+    
+    const filme = this.cadastro.getRawValue() as Filme;
+    this.cadastro.reset();
+    this.salvar(filme);
  }
 
- get f() {
-   return this.cadastro.controls;
+  private salvar(filme) {
+   this.filmeService.salvar(filme).subscribe(() => {
+     alert('Sucesso');
+   });
  }
 
 }
