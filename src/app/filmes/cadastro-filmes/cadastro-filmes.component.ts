@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 
 import { ValidarCamposService } from './../../shared/components/campos/validar-campos.service';
 import { FilmeService } from './../../core/filme.service';
 import { Filme } from 'src/app/shared/models/filme';
+import { AlertaComponent } from './../../shared/components/alerta/alerta.component';
 
 
 @Component({
@@ -19,9 +21,10 @@ export class CadastroFilmesComponent implements OnInit {
   // A variável do tipo FormBuilder já está
  // sendo declarada como atributo da classe e sendo
  // instanciada
-  constructor(private fb: FormBuilder,
-              private filmeService: FilmeService,
-              public validacao: ValidarCamposService) { }
+  constructor(public dialog: MatDialog,
+              public validacao: ValidarCamposService,
+              private fb: FormBuilder,
+              private filmeService: FilmeService) { }
 
   ngOnInit(): void {
 
@@ -43,15 +46,19 @@ export class CadastroFilmesComponent implements OnInit {
     if (this.cadastro.invalid) {
       return;
     }
-    
+
     const filme = this.cadastro.getRawValue() as Filme;
     this.cadastro.reset();
     this.salvar(filme);
  }
 
   private salvar(filme) {
-   this.filmeService.salvar(filme).subscribe(() => {
-     alert('Sucesso');
+   this.filmeService.salvar(filme).subscribe(
+     () => {
+     this.dialog.open(AlertaComponent);
+   },
+     () => {
+       alert('Erro');
    });
  }
 
