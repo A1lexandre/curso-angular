@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+
 
 import { ValidarCamposService } from './../../shared/components/campos/validar-campos.service';
 import { FilmeService } from './../../core/filme.service';
 import { Filme } from 'src/app/shared/models/filme';
 import { AlertaComponent } from './../../shared/components/alerta/alerta.component';
+import { Alerta } from 'src/app/shared/models/alerta';
 
 
 @Component({
@@ -24,7 +27,8 @@ export class CadastroFilmesComponent implements OnInit {
   constructor(public dialog: MatDialog,
               public validacao: ValidarCamposService,
               private fb: FormBuilder,
-              private filmeService: FilmeService) { }
+              private filmeService: FilmeService,
+              private router: Router) { }
 
   ngOnInit(): void {
 
@@ -43,6 +47,7 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   submit(): void {
+    this.cadastro.markAllAsTouched();
     if (this.cadastro.invalid) {
       return;
     }
@@ -55,11 +60,30 @@ export class CadastroFilmesComponent implements OnInit {
   private salvar(filme) {
    this.filmeService.salvar(filme).subscribe(
      () => {
-     this.dialog.open(AlertaComponent);
+     const config = {
+       data: {
+         txtBtnSucesso: 'Ir para listagem',
+         txtBtnCancelar: 'Adicionar novo filme',
+         possuirBtnFechar: true
+       } as Alerta
+     };
+     const dialogRef = this.dialog.open(AlertaComponent, config);
+     dialogRef.afterClosed().subscribe((resp) => {
+       if (resp) {
+         this.router.navigateByUrl('filmes');
+       }
+     });
    },
      () => {
-       alert('Erro');
-   });
- }
-
+     const config = {
+        data: {
+          titulo: 'Filme não registrado',
+          descricao: 'Não foi possível registrar o filme, por favor tente mais tarde.',
+          txtBtnSucesso: 'OK',
+          colorBtnSucesso: 'warn'
+        } as Alerta
+    }
+     this.dialog.open(AlertaComponent, config);
+    });
+  }
 }
