@@ -7,28 +7,138 @@
       "descricao": "Even though everybody else thinks he's a sparrow - Richard himself holds tight to the conviction that he is in fact a stork.",
       "notaIMDb": 5.8,
       "iMDbUrl": "https://www.imdb.com/title/tt3823116/",
-      "genero": "opcao",
+      "genero": "Aventura",
       "id": 1
     },
     {
-      "titulo": "Child's play",
-      "imagemUrl": "",
-      "dtLancamento": "2020-07-29T03:00:00.000Z",
-      "descricao": "",
-      "notaIMDb": 8,
-      "iMDbUrl": "",
-      "genero": "opcao",
-      "id": 2
+      "titulo": "Hamilton",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BNjViNWRjYWEtZTI0NC00N2E3LTk0NGQtMjY4NTM3OGNkZjY0XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-07-03T03:00:00.000Z",
+      "descricao": "The real life of one of America's foremost founding fathers and first Secretary of the Treasury, Alexander Hamilton. Captured live on Broadway from the Richard Rodgers Theater with the original Broadway cast.",
+      "notaIMDb": 9,
+      "iMDbUrl": "https://www.imdb.com/title/tt8503618/",
+      "genero": "Ação",
+      "id": 4
     },
     {
-      "titulo": "cscscc",
-      "imagemUrl": "cdcscdcddcdc",
-      "dtLancamento": "2020-07-05T03:00:00.000Z",
-      "descricao": "Bla bla bla",
-      "notaIMDb": 2,
-      "iMDbUrl": "dsdsakdjsdkjasdl",
-      "genero": "opcao",
-      "id": 3
+      "titulo": "The Outpost",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BNWYyMzNjY2EtODVmYi00ODBmLWIyNGMtNDdhMGViY2RhNjcxXkEyXkFqcGdeQXVyNDExMzMxNjE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-07-03T03:00:00.000Z",
+      "descricao": "A small team of U.S. soldiers battle against hundreds of Taliban fighters in Afghanistan.",
+      "notaIMDb": 6.6,
+      "iMDbUrl": "https://www.imdb.com/title/tt3833480/",
+      "genero": "História",
+      "id": 5
+    },
+    {
+      "titulo": "Artemis Fowl: O Mundo Secreto",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BYWFmYjBiYzItYjBlOS00NThkLTljMWEtYzQ4NTdlNDlmMjg0XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-06-12T03:00:00.000Z",
+      "descricao": "Artemis Fowl, a young criminal prodigy, hunts down a secret society of fairies to find his missing father.",
+      "notaIMDb": 4.1,
+      "iMDbUrl": "https://www.imdb.com/title/tt3089630/",
+      "genero": "Aventura",
+      "id": 6
+    },
+    {
+      "titulo": "Vingadores: Ultimato",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2019-04-25T03:00:00.000Z",
+      "descricao": null,
+      "notaIMDb": 8.4,
+      "iMDbUrl": "https://www.imdb.com/title/tt4154796/",
+      "genero": "Aventura",
+      "id": 7
+    },
+    {
+      "titulo": "Parasita ",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2019-11-07T03:00:00.000Z",
+      "descricao": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+      "notaIMDb": 8.6,
+      "iMDbUrl": "https://www.imdb.com/title/tt6751668/",
+      "genero": "Drama",
+      "id": 8
+    },
+    {
+      "titulo": "Destacamento Blood",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BNjE4ODEwNzktYjg5Yi00N2YxLWExMmEtMmQyZTBiYWI4MGQwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-06-12T03:00:00.000Z",
+      "descricao": "Four African American vets battle the forces of man and nature when they return to Vietnam seeking the remains of their fallen squad leader and the gold fortune he helped them hide.",
+      "notaIMDb": 6.6,
+      "iMDbUrl": "https://www.imdb.com/title/tt9777644/",
+      "genero": "Drama",
+      "id": 9
+    },
+    {
+      "titulo": "De Volta para o Futuro",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "1985-12-25T02:00:00.000Z",
+      "descricao": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
+      "notaIMDb": 8.5,
+      "iMDbUrl": "https://www.imdb.com/title/tt0088763/",
+      "genero": "Ficção Científica",
+      "id": 10
+    },
+    {
+      "titulo": "Frozen II",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-01-02T03:00:00.000Z",
+      "descricao": "Anna, Elsa, Kristoff, Olaf and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land. They set out to find the origin of Elsa's powers in order to save their kingdom.",
+      "notaIMDb": 6.9,
+      "iMDbUrl": "https://www.imdb.com/title/tt4520988/",
+      "genero": "Aventura",
+      "id": 11
+    },
+    {
+      "titulo": "SCOOBY! O Filme",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BZTJmODM0MDQtMTRjYy00YWZjLThjODItMzQ5N2I2NDBjYzA1XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UY268_CR9,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-05-15T03:00:00.000Z",
+      "descricao": "Scooby and the gang face their most challenging mystery ever: a plot to unleash the ghost dog Cerberus upon the world. As they race to stop this dogpocalypse, the gang discovers that Scooby has an epic destiny greater than anyone imagined.",
+      "notaIMDb": 5.7,
+      "iMDbUrl": "https://www.imdb.com/title/tt3152592/",
+      "genero": "Aventura",
+      "id": 12
+    },
+    {
+      "titulo": "Force of Nature",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BNjZjODI5NmUtZTM3ZS00ZDkyLWJiMDYtYjI4MzFhODg1MDFmXkEyXkFqcGdeQXVyOTg4MDYyNw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-06-30T03:00:00.000Z",
+      "descricao": "A gang of thieves plan a heist during a hurricane and encounter trouble when a cop tries to force everyone in the building to evacuate.",
+      "notaIMDb": 4.4,
+      "iMDbUrl": "https://www.imdb.com/title/tt10308928/",
+      "genero": "Ação",
+      "id": 13
+    },
+    {
+      "titulo": "A Origem",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2010-08-06T03:00:00.000Z",
+      "descricao": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "notaIMDb": 8.8,
+      "iMDbUrl": "https://www.imdb.com/title/tt1375666/",
+      "genero": "Ficção Científica",
+      "id": 14
+    },
+    {
+      "titulo": "Interestelar ",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2014-11-06T02:00:00.000Z",
+      "descricao": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "notaIMDb": 8.6,
+      "iMDbUrl": "https://www.imdb.com/title/tt0816692/",
+      "genero": "Ação",
+      "id": 15
+    },
+    {
+      "titulo": "Ava",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BMTMzMTg1MjgtOWNhYy00NmZmLWExOTctMjA2OTZhZDFkNDhhXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-09-25T03:00:00.000Z",
+      "descricao": "Ava (Chastain) is a deadly assassin who works for a black ops organization, traveling the globe specializing in high profile hits. When a job goes dangerously wrong she is forced to fight for her own survival.",
+      "notaIMDb": 5.4,
+      "iMDbUrl": "https://www.imdb.com/title/tt8784956/",
+      "genero": "Ação",
+      "id": 16
     }
   ]
 }

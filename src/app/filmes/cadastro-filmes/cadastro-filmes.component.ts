@@ -42,7 +42,7 @@ export class CadastroFilmesComponent implements OnInit {
       'genero': ['', Validators.required]
     });
 
-    this.generos = ['Ação', 'Aventura', 'Ficção Científica', 'Romance', 'Terror'];
+    this.generos = ['Ação', 'Aventura', 'Ficção Científica', 'Romance', 'Terror', 'Drama', 'Biografia', 'História'];
 
   }
 
