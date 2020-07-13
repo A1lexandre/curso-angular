@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
+import { debounceTime } from 'rxjs/operators';
+
 import { FilmeService } from './../../core/filme.service';
 import { Filme } from 'src/app/shared/models/filme';
 import { ConfigParams } from './../../shared/models/config-params';
@@ -11,6 +13,8 @@ import { ConfigParams } from './../../shared/models/config-params';
   styleUrls: ['./listagem-filmes.component.scss']
 })
 export class ListagemFilmesComponent implements OnInit {
+
+  semFoto = 'https://www.arteshowestruturas.com.br/wp-content/uploads/sites/699/2017/01/SEM-IMAGEM-13.jpg';
 
   config = {
     pagina: 0,
@@ -30,12 +34,14 @@ export class ListagemFilmesComponent implements OnInit {
       genero: ['']
     });
 
-    this.filtragem.get('txtPesquisa').valueChanges.subscribe((val: string) => {
+    this.filtragem.get('txtPesquisa').valueChanges.pipe(debounceTime(400))
+     .subscribe((val: string) => {
       this.config.pesquisa = val;
       this.reinicializarconsulta();
     });
 
-    this.filtragem.get('genero').valueChanges.subscribe((val: string) => {
+    this.filtragem.get('genero').valueChanges.pipe(debounceTime(400))
+     .subscribe((val: string) => {
       this.config.campo = {tipo: 'genero', valor: val };
       this.reinicializarconsulta();
     });
