@@ -139,6 +139,16 @@
       "iMDbUrl": "https://www.imdb.com/title/tt8784956/",
       "genero": "Ação",
       "id": 16
+    },
+    {
+      "titulo": "Hereditário",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BOTU5MDg3OGItZWQ1Ny00ZGVmLTg2YTUtMzBkYzQ1YWIwZjlhXkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2018-06-21T03:00:00.000Z",
+      "descricao": "A grieving family is haunted by tragic and disturbing occurrences.",
+      "notaIMDb": 7.3,
+      "iMDbUrl": "https://www.imdb.com/title/tt7784604/",
+      "genero": "Terror",
+      "id": 17
     }
   ]
 }

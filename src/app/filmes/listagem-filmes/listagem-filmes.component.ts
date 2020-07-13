@@ -14,6 +14,8 @@ export class ListagemFilmesComponent implements OnInit {
   readonly limite = 4;
   pagina = 0;
   filmes: Filme[] = [];
+  textoPesquisa: string;
+  genero: string;
   filtragem: FormGroup;
   generos: Array<string>;
 
@@ -22,8 +24,18 @@ export class ListagemFilmesComponent implements OnInit {
 
   ngOnInit(): void {
     this.filtragem = this.fb.group({
-      nomeFilme: [''],
+      txtPesquisa: [''],
       genero: ['']
+    });
+
+    this.filtragem.get('txtPesquisa').valueChanges.subscribe((val: string) => {
+      this.textoPesquisa = val;
+      this.reinicializarconsulta();
+    });
+
+    this.filtragem.get('genero').valueChanges.subscribe((val: string) => {
+      this.genero = val;
+      this.reinicializarconsulta();
     });
 
     this.generos = ['Ação', 'Aventura', 'Ficção Científica', 'Romance', 'Terror', 'Drama', 'Biografia', 'História'];
@@ -37,9 +49,15 @@ export class ListagemFilmesComponent implements OnInit {
 
   private listarFilmes(): void {
     this.pagina++;
-    this.filmeService.listar(this.pagina, this.limite).subscribe((filmes: Filme[]) => {
+    this.filmeService.listar(this.pagina, this.limite, this.textoPesquisa, this.genero).subscribe((filmes: Filme[]) => {
       this.filmes.push(...filmes);
     });
+  }
+
+  private reinicializarconsulta() {
+    this.pagina = 0;
+    this.filmes = [];
+    this.listarFilmes();
   }
 
 }
