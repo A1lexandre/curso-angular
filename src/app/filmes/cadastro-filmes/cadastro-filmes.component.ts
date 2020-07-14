@@ -82,7 +82,7 @@ export class CadastroFilmesComponent implements OnInit {
           txtBtnSucesso: 'OK',
           colorBtnSucesso: 'warn'
         } as Alerta
-    }
+    };
      this.dialog.open(AlertaComponent, config);
     });
   }

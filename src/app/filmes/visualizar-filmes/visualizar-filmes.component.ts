@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 import { FilmeService } from './../../core/filme.service';
 import { Filme } from 'src/app/shared/models/filme';
+import { AlertaComponent } from './../../shared/components/alerta/alerta.component';
 
 @Component({
   selector: 'dio-visualizar-filmes',
@@ -14,8 +16,10 @@ export class VisualizarFilmesComponent implements OnInit {
   filme: Filme;
   id: number;
 
-  constructor(private filmeService: FilmeService,
-              private activatedRoute: ActivatedRoute) { }
+  constructor(public dialog: MatDialog,
+              private filmeService: FilmeService,
+              private activatedRoute: ActivatedRoute, 
+              private router: Router) { }
 
   ngOnInit() {
 
@@ -25,12 +29,30 @@ export class VisualizarFilmesComponent implements OnInit {
 
   private visualizar() {
 
-      this.filmeService.visualizarFilme(
-        this.activatedRoute.snapshot.params['id']
-      ).subscribe((filme: Filme) => {
+      this.filmeService.visualizar(this.id).subscribe((filme: Filme) => {
         this.filme = filme;
       });
     }
+
+  private excluir() {
+    const config = {
+      data: {
+        titulo: 'Você realmente deseja excluir o filme?',
+        descricao: 'Se sim, clique em OK',
+        corBtnSucesso: 'warn',
+        corBtnCancelar: 'primary',
+        possuirBtnFechar: true
+      }
+    };
+    const dialogRef = this.dialog.open(AlertaComponent, config);
+    dialogRef.afterClosed().subscribe((resp) => {
+      if (resp) {
+        this.filmeService.excluir(this.id).subscribe(() => {
+          this.router.navigateByUrl('filmes');
+        });
+      }
+    });
+
   }
 
-
+  }
