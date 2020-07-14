@@ -34,7 +34,11 @@ export class VisualizarFilmesComponent implements OnInit {
       });
     }
 
-  private excluir() {
+  private editar(): void {
+    this.router.navigateByUrl('filmes/cadastro/' + this.filme.id);
+  }
+
+  private excluir(): void {
     const config = {
       data: {
         titulo: 'Você realmente deseja excluir o filme?',

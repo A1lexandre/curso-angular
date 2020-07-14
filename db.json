@@ -87,7 +87,7 @@
       "descricao": "Anna, Elsa, Kristoff, Olaf and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land. They set out to find the origin of Elsa's powers in order to save their kingdom.",
       "notaIMDb": 6.9,
       "iMDbUrl": "https://www.imdb.com/title/tt4520988/",
-      "genero": "Aventura",
+      "genero": "Drama",
       "id": 11
     },
     {
@@ -141,7 +141,7 @@
       "id": 16
     },
     {
-      "titulo": "Hereditário",
+      "titulo": "Hereditário ario",
       "imagemUrl": "https://m.media-amazon.com/images/M/MV5BOTU5MDg3OGItZWQ1Ny00ZGVmLTg2YTUtMzBkYzQ1YWIwZjlhXkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_UX182_CR0,0,182,268_AL_.jpg",
       "dtLancamento": "2018-06-21T03:00:00.000Z",
       "descricao": "A grieving family is haunted by tragic and disturbing occurrences.",
@@ -149,6 +149,16 @@
       "iMDbUrl": "https://www.imdb.com/title/tt7784604/",
       "genero": "Terror",
       "id": 17
+    },
+    {
+      "titulo": "Harry Potter e a Pedra Filosofal ",
+      "imagemUrl": "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2001-11-23T02:00:00.000Z",
+      "descricao": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+      "notaIMDb": 7.6,
+      "iMDbUrl": "https://www.imdb.com/title/tt0241527/",
+      "genero": "Aventura",
+      "id": 18
     }
   ]
 }

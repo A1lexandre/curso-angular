@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { FilmesModule } from './filmes/filmes.module';
 import { CadastroFilmesComponent } from './filmes/cadastro-filmes/cadastro-filmes.component';
 import { ListagemFilmesComponent } from './filmes/listagem-filmes/listagem-filmes.component';
@@ -22,8 +23,16 @@ const routes: Routes = [
       },
       {
         path: 'cadastro',
-        component: CadastroFilmesComponent,
-        pathMatch: 'full'
+        children: [
+          {
+            path: '',
+            component: CadastroFilmesComponent
+          },
+          {
+            path: ':id',
+            component: CadastroFilmesComponent
+          }
+        ]
       },
       {
         path: ':id',

@@ -12,7 +12,7 @@ export class AlertaComponent implements OnInit {
 
   alerta = {
   titulo: 'Sucesso',
-  descricao: 'Seu registro foi salvo com sucesso!',
+  descricao: 'Seu registro foi salvo!',
   txtBtnSucesso: 'OK',
   txtBtnCancelar: 'Cancelar',
   corBtnSucesso: 'accent',
